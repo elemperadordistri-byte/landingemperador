@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Work+Sans:wght@300;400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-obsidian: #0D0817;
+  --color-surface: #150D26;
+  --color-card: #1D1233;
+  --color-emperor-gold: #F59E0B;
+  --color-emperor-gold-muted: rgba(245, 158, 11, 0.2);
+  --color-parchment: #F8F0FF;
+  --color-midnight: #0A0612;
+  
+  --font-serif: "Cormorant Garamond", serif;
+  --font-sans: "Work Sans", sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-obsidian text-parchment font-sans antialiased;
+  }
+  
+  h1, h2, h3, h4 {
+    @apply font-serif leading-tight;
+  }
+}
+
+.gold-glow {
+  box-shadow: 0 20px 40px rgba(212, 175, 55, 0.08);
+}
+
+.gold-border {
+  border-color: rgba(212, 175, 55, 0.2);
+}
+
+.text-gold {
+  color: #D4AF37;
+}
+
+.bg-gold {
+  background-color: #D4AF37;
+}
+
+.pill-button {
+  @apply rounded-full px-8 py-3 font-semibold transition-all duration-300;
+}
